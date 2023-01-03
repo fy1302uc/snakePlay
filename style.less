@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {}
+
+.wrap {
+  height: 100%;
+  background-color: gray;
+  position: relative;
+
+  >.room {
+    height:115vw;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    >.snake {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      background-color: deeppink;
+    }
+    >.love{
+      position: absolute;
+      width: 5vw;
+      height:5vw;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    /*
+    .tooltip{
+      display: none;
+      position: absolute;
+      top:0;
+      right: 0;
+      bottom: 0;
+      left:0;
+      margin: auto;
+      width: 60vw;
+      height:60vw;
+      color:white;
+      
+    }
+    */
+  }
+
+  .control {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border: solid 1px green;
+    height: 60vw;
+    width: 60vw;
+    overflow: hidden;
+   // box-sizing:border-box;
+    border-radius: 80% 50%;
+
+
+    >* {
+      position:absolute;
+      border: solid 1px white;
+      box-sizing: border-box;
+      height: 60%;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.6);
+        &:active{
+          background-color: gray;
+        }
+
+      :first-child {
+        transform: rotateZ(-45deg);
+        color:white;
+        user-select: none;
+      }
+
+    }
+
+    .top {
+      top:-10%;
+      left:-10%;
+      //float: left;
+      >h2{
+      margin:10vw 0 0 10vw;
+      
+      }
+    }
+
+    .right {
+     // float: right;
+     right:-10%;
+     top:-10%;
+    }
+
+    .bottom {
+     // float: right;
+     bottom:-10%;
+     right:-10%;
+     >h2{
+       margin: 0 10vw 10vw 0;
+     }
+    }
+
+    .left {
+      //float: left;
+      left:-10%;
+      bottom:-10%;
+    }
+
+  }
+}
